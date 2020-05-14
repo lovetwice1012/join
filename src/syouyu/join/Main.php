@@ -12,6 +12,7 @@ use syouyu\join\form\CustomForm;
 class Main extends PluginBase implements Listener{
 
     public function onEnable(){
+        if (!(file_exists($this->getDataFolder()))) @mkdir($this->getDataFolder());
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->config = new Config($this->getDataFolder() . "display.yml", Config::YAML);
     }
