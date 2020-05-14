@@ -20,8 +20,6 @@ class Main extends PluginBase implements Listener{
         $player = $event->getPlayer();
         $name = $player->getName();
         if(!$this->config->exists($name)){
-            $this->config->set($name, $name);
-            $this->config->save();
             $player->sendForm(new CustomForm());
             $player->setImmobile(true);
         }
