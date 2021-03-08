@@ -16,7 +16,7 @@ class CustomForm implements Form{
         if ($data === null){
             return;
         }
-        if($data[0] == "ぎょうざ"){
+        if($data[0] == "きづな"){
             $player->setImmobile(false);
             return;
         }
@@ -30,7 +30,7 @@ class CustomForm implements Form{
             'content' => [
                 [
                     'type' => 'input',
-                    'text' => 'passwordを入力してください'
+                    'text' => 'Discordのルールチャンネルにあったpasswordを入力してください'
                 ]
             ]
         ];
